@@ -1,0 +1,137 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+@import "../../styles/base.scss";
+
+$card-bg-hover: darken($card-bg-light, 10);
+
+.communitySection {
+  @extend %container;
+  @extend %sectionPadding;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .communitySectionInner {
+    padding-left: 104px;
+    padding-right: 104px;
+
+    @include desktop {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 32px;
+    }
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    .row {
+      display: flex;
+      width: 100%;
+
+      &:first-child, &:nth-child(2) {
+        margin-bottom: 16px;
+      }
+
+      @include tablet {
+        flex-direction: column;
+        margin: 0;
+      }
+
+      .cell {
+        display: flex;
+        flex: calc(50% - 8px) 1 0;
+        flex-shrink: 0;
+        flex-grow: 1;
+        &:first-child {
+          margin-right: 16px;
+
+          @include tablet {
+            margin-right: 0;
+            margin-bottom: 16px;
+          }
+        }
+      }
+
+    }
+  }
+
+  .socialNetworkCard {
+    display: flex;
+    flex-basis: 100%;
+    align-items: flex-end;
+    min-height: 176px;
+    padding: 8px 16px 8px 32px;
+    background-color: $card-bg-light;
+    background-position: right 16px center;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+
+    @include laptop {
+      min-height: 136px;
+    }
+
+    @include tablet {
+      margin-bottom: 16px;
+      margin-right: 0;
+      padding: 8px 24px;
+      border-radius: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &:hover {
+      background-color: $card-bg-hover;
+      cursor: pointer;
+    }
+
+    .cardLinkWrapper {
+      position: relative;
+      padding-bottom: 16px;
+      padding-right: 20px;
+      z-index: 2;
+
+      .networkTitle {
+        @include h3;
+        color: $card-light-text-color;
+      }
+    }
+
+    .linkInner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      text-decoration: none;
+      color: inherit;
+
+      .bgImage {
+        position: absolute;
+        top: 0; right: 0;
+        bottom: 0;
+        z-index: 1;
+        min-width: 120px;
+        padding: 28px 25px;
+
+        @include laptop {
+          min-width: 82px;
+          padding: 21px 19px;
+        }
+
+        @include tablet {
+          padding: 21px 11px;
+        }
+      }
+    }
+  }
+}

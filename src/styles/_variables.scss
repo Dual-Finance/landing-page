@@ -1,0 +1,73 @@
+// variables naming styleguide
+// $element-property-type
+
+// color
+$black: #000000;
+
+// main-colors
+$text-color-primary: #ffffff;
+$text-color-secondary: #B4B4D6;
+$text-color-tertiary: #8282A3;
+$header-panel-text-color: #05040D;
+
+// background-colors
+$bg-primary: #05040d;
+$bg-additional: #0C091D;
+$footer-bg: #08081c;
+$header-panel-bg: #D6F4FE;
+$strike-button-bg: rgba(5, 4, 13, 0.04);
+
+// cards
+$section-bg-light: #D6F4FE;
+$section-bg-dark: $bg-primary;
+
+$card-bg-dark: #05040D;
+$card-bg-light: #D6F4FE;
+$card-light-text-color: #0C091D;
+$card-light-text-color-secondary: #64747C;
+$card-bg-secondary: #0C091D;
+
+$card-border-color: #1E1A3E;
+$card-border-color-secondary: #191434;
+
+
+
+// accent
+$accent-primary: #376FFF;
+$accent-secondary: rgba(55, 111, 255, 0.2);
+
+// Buttons
+$button-bg-primary: #3A9F7B;
+$button-bg-primary-hover: darken($button-bg-primary, 10);
+$button-bg-primary-active: darken($button-bg-primary, 20);
+$button-primary-text-color: $text-color-primary;
+
+$button-bg-secondary: #D6F4FE;
+$button-bg-secondary-hover: darken($button-bg-secondary, 10);
+$button-bg-secondary-active: darken($button-bg-secondary, 20);
+$button-secondary-text-color: #05040D;
+
+
+// font-size:
+$font-size-xs: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 18px;
+$font-size-xl: 20px;
+$font-size-xxl: 26px;
+$font-size-xxxl: 32px;
+
+// Menu
+$menu-link-color-hover: #376FFF;
+
+// Curved background
+$cutoff-height-mobile: 58px;
+$cutoff-height-tablet: 84px;
+$cutoff-height-laptop: 120px;
+$cutoff-height-desktop: 172px;
+
+// breakpoints
+$desktop: 1440px;
+$laptop: 992px;
+$tablet: 768px;
+$mobile: 375px;

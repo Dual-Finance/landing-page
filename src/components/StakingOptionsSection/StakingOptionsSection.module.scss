@@ -1,0 +1,86 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/base.scss';
+
+
+.stakingOptionsSection {
+  .container {
+    @extend %container;
+  }
+  .sectionInner {
+    @extend %sectionPadding;
+  }
+
+  .sectionHeader {
+   @extend %sectionHeader;
+
+    .title {
+      display: flex;
+      margin-bottom: 16px;
+    }
+
+    .description {
+      color: $text-color-secondary;
+      font-size: 20px;
+      line-height: 32px;
+      @include laptop {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .sectionContent {
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+
+      .row {
+        display: flex;
+        width: 100%;
+
+        &:first-child {
+          margin-bottom: 16px;
+        }
+
+        @extend %InfoCardMarginBottom;
+
+        @include tablet {
+          flex-direction: column;
+          margin: 0;
+        }
+
+        .cell {
+          display: flex;
+          position: relative;
+          flex: calc(50% - 8px) 1 0;
+          flex-shrink: 0;
+          flex-grow: 1;
+          &:first-child {
+            margin-right: 16px;
+            @include tablet {
+              margin-right: 0;
+              margin-bottom: 16px;
+            }
+          }
+
+          &:last-child {
+            top: 100px;
+
+            @include desktop {
+              top: 56px;
+            }
+
+            @include laptop {
+              top: 40px;
+            }
+
+            @include tablet {
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

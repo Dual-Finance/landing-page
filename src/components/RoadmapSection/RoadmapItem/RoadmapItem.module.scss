@@ -1,0 +1,124 @@
+@import "../../../styles/_variables.scss";
+@import "../../../styles/_mixins.scss";
+@import "../../../styles/_icons.scss";
+
+.itemLeft {
+  justify-content: end;
+  padding-left: 104px;
+
+  @include desktop {
+    padding-left: 80px;
+  }
+
+  @include tablet {
+    padding-left: 0;
+  }
+}
+
+.itemRight {
+  justify-content: flex-start;
+  padding-right: 104px;
+
+  @include desktop {
+    padding-right: 80px;
+  }
+
+  @include tablet {
+    padding-right: 0;
+  }
+}
+
+.roadmapItem {
+  display: flex;
+  margin-bottom: 48px;
+
+  @include tablet {
+    margin: 0 0 24px 0;
+  }
+
+  &Bg {
+    position: relative;
+    width: 400px;
+    border-radius: 24px;
+    background: $card-bg-dark;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+
+    @include desktop {
+      width: 384px;
+    }
+
+    @include laptop {
+      width: 512px;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  .index {
+    margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 16px;
+    }
+  }
+
+  .title {
+    @include h5;
+    color: $text-color-primary;
+    margin-bottom: 8px;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  .description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    color: $text-color-secondary;
+  }
+
+  .arrow {
+    width: 55px;
+    height: 200px;
+    position: absolute;
+
+    @include tablet {
+      width: 8px;
+      height: 36px;
+      z-index: 1;
+    }
+  }
+
+  .arrowRight {
+    @include logoBg($roadmap-arrow-right);
+    bottom: -52px;
+    right: -52px;
+
+    @include tablet {
+      @include logoBg($roadmap-arrow-down);
+      bottom: -30px;
+      left: 44px;
+      right: initial;
+    }
+  }
+
+  .arrowLeft {
+    @include logoBg($roadmap-arrow-left);
+    bottom: -55px;
+    left: -52px;
+
+    @include tablet {
+      @include logoBg($roadmap-arrow-down);
+      bottom: -30px;
+      left: 44px;
+    }
+  }
+}

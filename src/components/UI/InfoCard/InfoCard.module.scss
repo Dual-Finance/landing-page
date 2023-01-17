@@ -1,0 +1,94 @@
+@import '../../../styles/_variables.scss';
+@import '../../../styles/mixins.scss';
+
+.infoCard {
+  min-height: 608px;
+  position: relative;
+  background-color: $card-bg-dark;
+  padding: 40px;
+  border-radius: 40px;
+
+  @include laptop {
+    padding: 24px;
+    min-height: 500px;
+    border-radius: 24px;
+  }
+
+  @include tablet {
+    min-height: 400px;
+  }
+
+  &.dark {}
+
+  &.light {
+    background-color: $card-bg-light;
+    color: $card-light-text-color;
+    .title {
+      color: $card-light-text-color;
+    }
+    .content {
+      .description {
+        // todo: replace with variable
+        color: #758086;
+      }
+    }
+  }
+
+  @include tablet {
+    padding: 24px 16px 24px 24px;
+    border-radius: 20px;
+  }
+
+  .title {
+    @include h3;
+    color: $text-color-primary;
+    margin-bottom: 20px;
+
+    @include laptop {
+      margin-bottom: 12px;
+    }
+  }
+
+  .content {
+    display: flex;
+
+    @include laptop {
+      flex-direction: column-reverse;
+    }
+
+    .description {
+      flex: 100% 1 1;
+      color: $text-color-secondary;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      margin-right: 16px;
+      @include laptop {
+        margin-right: 0;
+      }
+    }
+
+    .image {
+      flex-basis: 412px;
+      width: 412px;
+      flex-shrink: 0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      @include desktop {
+        flex-basis: 280px;
+        width: 280px;
+      }
+
+      @include laptop {
+        flex-basis: 200px;
+        width: 200px;
+      }
+
+      img, picture {
+        display: block;
+      }
+    }
+  }
+}

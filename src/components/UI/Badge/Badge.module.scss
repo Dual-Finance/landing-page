@@ -1,0 +1,40 @@
+@import '../../../styles/_variables.scss';
+@import '../../../styles/mixins.scss';
+
+.badge {
+  display: inline-flex;
+  background: rgba(55, 111, 255, 0.15);
+  border: 2px solid #3A9F7B;
+  box-sizing: border-box;
+  border-radius: 2px 16px 16px 16px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #3A9F7B;
+
+  //@include tablet {
+  //  margin-bottom: 16px;
+  //}
+
+  &.sizeRegular {
+    padding: 6px 16px;
+  }
+
+  &.sizeSmall {
+    padding: 8px 11px;
+  }
+
+  &.fontSizeRegular {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  &.fontSizeSmall {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+
+
+}

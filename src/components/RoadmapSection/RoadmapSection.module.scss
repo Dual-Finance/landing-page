@@ -1,0 +1,81 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+@import "../../styles/base.scss";
+
+.roadmapSection {
+  @extend %sectionBorderRadius;
+  @include sectionLight;
+
+  .container {
+    @extend %container;
+  }
+
+  .roadmapSectionContent {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 232px 126px 88px 104px;
+
+    @include desktop {
+      padding: 168px 24px 72px 24px;
+    }
+
+    @include laptop {
+      padding: 72px 40px 56px 40px;
+    }
+
+    @include tablet {
+      padding: 90px 16px 48px 16px;
+    }
+
+    @include laptop {
+      flex-direction: column;
+    }
+  }
+
+  .descriptionBlock {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40px;
+    height: max-content;
+    margin-right: 98px;
+    margin-bottom: 70px;
+
+    @include laptop {
+      margin-right: 16px;
+    }
+
+    @include laptop {
+      position: relative;
+      height: unset;
+      top: 0;
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+
+    .title {
+      @include h2;
+      margin-bottom: 16px;
+    }
+
+    .description {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 32px;
+
+      @include laptop {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  .roadmap {
+    display: flex;
+    flex-direction: column;
+  }
+}

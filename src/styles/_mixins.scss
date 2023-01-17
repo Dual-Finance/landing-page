@@ -1,0 +1,116 @@
+$desktop: 1440px;
+$laptop: 991px;
+$tablet: 767px;
+$mobile: 375px;
+
+// breakpoints
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+// utils
+@mixin logoBg($logoBg) {
+  background-image: $logoBg;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+// visibility
+@mixin b-hide-laptop {
+  display: block;
+  @include laptop {
+    display: none;
+  }
+}
+
+@mixin i-hide-laptop {
+  display: inline;
+  @include laptop {
+    display: none;
+  }
+}
+
+@mixin f-hide-laptop {
+  display: flex;
+  @include laptop {
+    display: none;
+  }
+}
+
+// cards
+@mixin sectionLight {
+  background-color: $card-bg-light;
+  color: $card-light-text-color;
+  .description {
+    color: $card-light-text-color-secondary;
+  }
+}
+
+
+// Typography
+@mixin h2 {
+  font-size: 56px;
+  line-height: 66px;
+  font-weight: 800;
+  letter-spacing: 0;
+
+  @include laptop {
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  @include tablet {
+    font-size: 38px;
+    line-height: 42px;
+  }
+}
+
+@mixin h3 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0;
+
+  @include laptop {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+
+@mixin h5 {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: 0;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

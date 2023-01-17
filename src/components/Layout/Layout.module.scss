@@ -1,0 +1,25 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+.defaultLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contentWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 104px auto;
+
+  @include tablet {
+    margin-bottom: 72px;
+  }
+
+}

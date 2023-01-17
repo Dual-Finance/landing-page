@@ -1,0 +1,76 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+@import "../../styles/_icons.scss";
+
+.curvedBackground {
+  padding-top: $cutoff-height-desktop;
+  background-image: $curved-background-dark-desktop;
+  background-repeat: no-repeat;
+  background-position: right 104px top -1px;
+
+  @include desktop {
+    padding-top: $cutoff-height-laptop;
+  }
+
+  @include laptop {
+    padding-top: $cutoff-height-tablet;
+  }
+
+  @include tablet {
+    padding-top: $cutoff-height-mobile;
+  }
+
+  .childrenWrapper {
+    margin-top: -$cutoff-height-desktop;
+    @include desktop {
+      margin-top: -$cutoff-height-laptop;
+    }
+
+    @include laptop {
+      margin-top: -$cutoff-height-tablet;
+    }
+
+    @include tablet {
+      margin-top: -$cutoff-height-mobile+1;
+    }
+
+  }
+
+  &.dark {
+    background-image: $curved-background-light-desktop;
+
+    @include desktop {
+      background-image: $curved-background-light-laptop;
+      background-position: right 40px top -1px;
+    }
+
+    @include laptop {
+      background-image: $curved-background-light-tablet;
+      background-position: right 40px top -1px;
+    }
+
+    @include tablet {
+      background-image: $curved-background-light-mobile;
+      background-position: center top -1px;
+    }
+  }
+
+  &.light {
+    background-image: $curved-background-dark-desktop;
+
+    @include desktop {
+      background-image: $curved-background-dark-laptop;
+      background-position: right 40px top -1px;
+    }
+
+    @include laptop {
+      background-image: $curved-background-dark-tablet;
+      background-position: right 40px top -1px;
+    }
+
+    @include tablet {
+      background-image: $curved-background-dark-mobile;
+      background-position: center top -1px;
+    }
+  }
+}
