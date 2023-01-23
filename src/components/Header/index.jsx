@@ -7,6 +7,8 @@ import { Logo } from '../Logo';
 import btcLogo from '../../assets/header/btcLogo.svg';
 import ethLogo from '../../assets/header/ethLogo.svg';
 import solLogo from '../../assets/header/solLogo.svg';
+import mngoLogo from '../../assets/header/tokens/mngo.svg';
+import bonkLogo from '../../assets/header/tokens/bonk.svg';
 import styles from './Header.module.scss';
 import { menu } from '../../constants/menu';
 import { Button } from '../UI/Button/Button';
@@ -207,27 +209,38 @@ export function Header() {
 
           <div className={styles.basementItemsWrapper} ref={elementRef}>
             <div className={styles.basementItems}>
+              <img className={styles.logo} src={solLogo} alt="x" />
+              <div className={styles.title}>SOL:</div>
+              <a href="https://beta.dual.finance/" target="_blank" rel="noreferrer" className={styles.value}>
+                {solApy > 0 ? <div>{solApy}% Max APY&ensp;</div> : <div>Loading&nbsp;</div>}
+              </a>
+            </div>
+            <div className={styles.basementItems}>
               <img className={styles.logo} src={btcLogo} alt="x" />
               <div className={styles.title}>BTC:</div>
               <a href="https://beta.dual.finance/" target="_blank" rel="noreferrer" className={styles.value}>
-                {btcApy > 0 ? <div>{btcApy}%&ensp;</div> : <div>N/A&nbsp;</div>}
-                <div>Max APY</div>
+                {btcApy > 0 ? <div>{btcApy}% Max APY&ensp;</div> : <div>Coming Soon&nbsp;</div>}
               </a>
             </div>
             <div className={styles.basementItems}>
               <img className={styles.logo} src={ethLogo} alt="x" />
               <div className={styles.title}>ETH:</div>
               <a href="https://beta.dual.finance/" target="_blank" rel="noreferrer" className={styles.value}>
-                {ethApy > 0 ? <div>{ethApy}%&ensp;</div> : <div>N/A&nbsp;</div>}
-                <div>Max APY</div>
+                {ethApy > 0 ? <div>{ethApy}% Max APY&ensp;</div> : <div>Coming Soon&nbsp;</div>}
               </a>
             </div>
             <div className={styles.basementItems}>
-              <img className={styles.logo} src={solLogo} alt="x" />
-              <div className={styles.title}>SOL:</div>
+              <img className={styles.logo} src={mngoLogo} alt="x" />
+              <div className={styles.title}>MNGO:</div>
               <a href="https://beta.dual.finance/" target="_blank" rel="noreferrer" className={styles.value}>
-                {solApy > 0 ? <div>{solApy}%&ensp;</div> : <div>N/A&nbsp;</div>}
-                <div>Max APY</div>
+                <div>Coming Soon&nbsp;</div>
+              </a>
+            </div>
+            <div className={styles.basementItems}>
+              <img className={styles.logo} src={bonkLogo} alt="x" />
+              <div className={styles.title}>BONK:</div>
+              <a href="https://beta.dual.finance/" target="_blank" rel="noreferrer" className={styles.value}>
+                <div>Staking Options Available!&nbsp;</div>
               </a>
             </div>
           </div>
