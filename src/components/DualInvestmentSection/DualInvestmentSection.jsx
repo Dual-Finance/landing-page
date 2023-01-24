@@ -6,7 +6,7 @@ import { CurvedBackgroundWrapper } from '../CurvedBackgroundWrapper/CurvedBackgr
 
 export const content = [
   {
-    title: 'Streaming prices',
+    title: 'Streaming Prices',
     imagePath: 'dual_investment/dual-inv-1',
     description:
       'Live streaming prices allow for better risk management and market timing while putting assets to work for longer.',

@@ -5,24 +5,24 @@ import { CurvedBackgroundWrapper } from '../CurvedBackgroundWrapper/CurvedBackgr
 
 const ROAD_MAP = [
   {
-    title: 'Staking Option Studio',
+    title: 'Staking Option Studio - Complete!',
     description:
-      'Partner with Dual Finance and engineer token incentive structures leveraging an easy-to-use UI. DUAL holders gain diversified upside exposure to a subset of responsibly designed protocols.',
+      'Partner with Dual Finance and engineer token incentive structures leveraging an easy-to-use UI or SDKs. DUAL holders gain diversified upside exposure to a subset of responsibly designed protocols.',
+  },
+  {
+    title: 'Dual DAO & Constitution',
+    description:
+      "Initialize parameters via a Constitution that are in the best interest of the treasury over the long term. Dual DAO's mandate will be to ensure the protocol is able to operate in perpetuity absent of early contributors. Create a DAO and treasury that is secure and self-sustaining.",
   },
   {
     title: 'Staking Options Fair Launch',
     description:
-      'DUAL tokens will be distributed purely through options based means. Dual Finance will therefore be the first and only crypto token project to launch without having directly sold any tokens. Participate in DIPs to access DUAL through LSOs at launch!',
+      'DUAL tokens will be distributed purely through options based means. Participate in DIPs to access DUAL SOs at launch and become a founding member of the Dual DAO!',
   },
   {
     title: 'Rehypothecated Lending Pool (RLPs)',
     description:
       'Provides users additional yield on deposited collateral by lending to approved liquidity providers to achieve a more capitally efficient market.',
-  },
-  {
-    title: 'DUAL DAO & Constitution',
-    description:
-      "Initialize parameters via a Constitution that are in the best interest of the treasury over the long term. DUAL DAO's mandate will to ensure ensure the protocol is able to operate in perpetuity absent of early contributors. The goal is to create a DAO and treasury that is secure and self-sustaining.",
   },
   {
     title: 'Staking Option Marketplace',
@@ -42,8 +42,8 @@ export function RoadmapSection() {
               <div className={styles.description}>
                 Dual Finance believes Decentralized Finance provides the perfect experimental platform for new
                 option-based incentives to proliferate and intends to be a driving force in their design, implementation
-                and distribution. Throughout this engineering process, the Dual Finance DAO will guide and steward the
-                DUAL token to be a requisite asset in any token options-based incentive plan.
+                and distribution. Throughout this engineering process, the Dual DAO will exemplify through the fair
+                distribution of DUAL, the power of options-based incentive plans.
               </div>
             </div>
             <div className={styles.roadmap}>

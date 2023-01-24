@@ -5,27 +5,27 @@ import { CurvedBackgroundWrapper } from '../CurvedBackgroundWrapper/CurvedBackgr
 
 const content = [
   {
-    title: 'General Staking Options (GSOs)',
+    title: 'Lockup Rewards',
     description:
       'Lock up liquid tokens for fixed periods to earn additional free upside exposure to any protocol including Dual Finance.',
     imagePath: 'staking-options/staking-options-1',
   },
   {
-    title: 'Liquidity Staking Options (LSOs)',
+    title: 'Participation Incentives',
     description:
-      'Participate in partner protocol ecosystems and use the products to earn free optionality. Earn DUAL LSOs through DIP participation that naturally hedge correlated risk.',
+      'Participate in partner protocol ecosystems and use the products to earn free optionality. Earn DUAL SOs through DIP participation that naturally hedge correlated risk.',
     imagePath: 'staking-options/staking-options-2',
   },
   {
-    title: 'Boosted Return',
+    title: 'Sustainable Liquidity',
     description:
-      'Earn additional yield on DIPs and other pooled investments through Staking Options. Either sell on the secondary market for a premium or hodl until maturity for unbounded upside.',
+      'Generate self-reinforcing liquidity designed to grow without external input in perpetuity. Supplement token liquidity directily from the protocol Risk Manager.',
     imagePath: 'staking-options/staking-options-3',
   },
   {
-    title: 'Base-Layer Incentive Protocol',
+    title: 'Token Distribution',
     description:
-      'Innovative and non-dilutive Staking Options offer partner projects a way out of broken DeFi structures. Harness the power of well aligned incentives to sustainably fund and advance token communities goals.',
+      'Innovative and non-dilutive Staking Options offer partner projects an alternative token distribution strategy. Harness the power of well aligned incentives to sustainably fund and advance token communities goals.',
     imagePath: 'staking-options/staking-options-4',
   },
 ];
