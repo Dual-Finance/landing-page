@@ -2,6 +2,7 @@ import React from 'react';
 import { Layout } from './components/Layout/Layout';
 import { RoadmapSection } from './components/RoadmapSection/RoadmapSection';
 import { CommunitySection } from './components/CommunitySection/CommunitySection';
+import { PartnerSection } from './components/PartnerSection/PartnerSection';
 import { StakingOptionsSection } from './components/StakingOptionsSection/StakingOptionsSection';
 import { HeroSection } from './components/HeroSection/HeroSection';
 import { DualInvestmentSection } from './components/DualInvestmentSection/DualInvestmentSection';
@@ -16,6 +17,7 @@ function App() {
       <RoadmapSection />
       <CallToActionSection />
       <CommunitySection />
+      <PartnerSection />
     </Layout>
   );
 }

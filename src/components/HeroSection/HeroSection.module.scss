@@ -150,6 +150,27 @@
           margin-left: 8px;
         }
       }
+
+      .winners {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+
+        .winnersText {
+          margin-top: 25px;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 20px;
+
+          color: $text-color-tertiary;
+        }
+
+        .summerLogo {
+          margin-left: 8px;
+          max-width: 25%;
+          max-height: 25%;
+        }
+      }
     }
 
     .illustration {

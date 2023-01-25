@@ -12,7 +12,7 @@ import bonkLogo from '../../assets/header/tokens/bonk.svg';
 import styles from './Header.module.scss';
 import { menu } from '../../constants/menu';
 import { Button } from '../UI/Button/Button';
-import { DISCORD, LAUNCH_APP } from '../../constants/urls';
+import { DISCORD } from '../../constants/urls';
 import discordLogo from '../../assets/header/socialLogo/discordLogo.svg';
 import instLogo from '../../assets/header/socialLogo/instLogo.svg';
 import mediumLogo from '../../assets/header/socialLogo/mediumLogo.svg';
@@ -184,18 +184,6 @@ export function Header() {
                   {item.title}
                 </a>
               ))}
-            </div>
-            <div className={styles.buttons}>
-              <Button link={LAUNCH_APP}>Launch app</Button>
-              <Button
-                type="secondary"
-                className={c(styles.mobileMenuToggle, menuButtonIsActive && styles.active)}
-                onClick={() => setMenuButton(!menuButtonIsActive)}
-                role="button"
-                tabIndex={0}
-              >
-                <span />
-              </Button>
             </div>
           </div>
         </div>

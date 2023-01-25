@@ -15,4 +15,8 @@ export const menu = [
     title: 'Community',
     path: '/#community',
   },
+  {
+    title: 'Partners',
+    path: '/#partner',
+  },
 ];
