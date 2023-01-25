@@ -33,7 +33,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className={styles.bottomBlock}>© 2022 Dual Labs. All rights reserved.</div>
+      <div className={styles.bottomBlock}>© 2023 Dual Labs. All rights reserved.</div>
     </footer>
   );
 }

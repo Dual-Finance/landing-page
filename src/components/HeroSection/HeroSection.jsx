@@ -3,6 +3,7 @@ import c from 'classnames';
 import styles from './HeroSection.module.scss';
 import solanaLogo from '../../assets/hero/solana-logo.svg';
 import buttonArrow from '../../assets/hero/button-arrow.svg';
+import summerCamp from '../../assets/hero/solana-summer-camp-hackathon-image.png';
 import { Button } from '../UI/Button/Button';
 import { DOCS, LAUNCH_APP } from '../../constants/urls';
 import { ResponsiveImage } from '../UI/ResponsiveImage/ResponsiveImage';
@@ -31,6 +32,10 @@ export function HeroSection() {
                   <div className={styles.builtOn}>
                     <div className={styles.builtOnText}>Built on:</div>
                     <img src={solanaLogo} alt="solana" className={styles.solanaLogo} />
+                  </div>
+                  <div className={styles.winners}>
+                    <div className={styles.winnersText}>DeFi Champions:</div>
+                    <img src={summerCamp} alt="solana" className={styles.summerLogo} />
                   </div>
                 </div>
               </div>
