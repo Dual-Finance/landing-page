@@ -1,2 +1,9 @@
+# *
 User-agent: *
-Disallow: /
+Allow: /
+
+# Host
+Host: https://www.dual.finance/
+
+# Sitemaps
+Sitemap: https://www.dual.finance/sitemap.xml
