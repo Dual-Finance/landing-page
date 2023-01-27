@@ -1,0 +1,26 @@
+name: Lint
+on:
+  push:
+    branches: master
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+
+defaults:
+  run:
+    working-directory: ./
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install eslint
+        run: yarn install
+      - name: Run ESLint on react code
+        run: cd app; yarn install; yarn run eslint  --ext .js,.ts,.tsx 'src/**/*.tsx'
+      - name: Run ESLint on app
+        run: cd app; yarn install; yarn run eslint  --ext .js,.ts,.tsx 'src/**/*.ts'
