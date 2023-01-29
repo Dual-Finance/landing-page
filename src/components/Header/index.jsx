@@ -45,9 +45,7 @@ export function Header() {
 
   useEffect(() => {
     const refreshAPY = async () => {
-      const connection = new Connection(
-        'https://floral-skilled-borough.solana-mainnet.discover.quiknode.pro/38cf24edefbebeb60eb7516eff40f076ac0823af/'
-      );
+      const connection = new Connection('https://solana-mainnet.g.alchemy.com/v2/GdkPP9kAPDUH_qVo8GQbUIoD32BZyAbA');
       let freshPrices = {};
       try {
         const priceInfos = await getMultipleAccounts(
