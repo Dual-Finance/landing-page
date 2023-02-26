@@ -69,11 +69,11 @@ export function Header() {
       }
 
       const VOL_MAP = {
-        [BTC]: 0.3,
-        [ETH]: 0.4,
-        [SOL]: 0.5,
-        [MNGO]: 0.6,
-        [BONK]: 1.0,
+        [BTC]: 0.2,
+        [ETH]: 0.25,
+        [SOL]: 0.3,
+        [MNGO]: 0.35,
+        [BONK]: 0.35,
       };
       const rfRate = 0.03; // Risk Free Rate of Return ~ T-Bill Rate
       const programAccountsPromise = connection.getProgramAccounts(
