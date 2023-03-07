@@ -21,6 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install eslint
-        run: yarn install
+        run: npm install
       - name: Run ESLint on react code
-        run: yarn lint
+        run: npm run lint
