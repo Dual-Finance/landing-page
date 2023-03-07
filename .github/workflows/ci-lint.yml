@@ -19,5 +19,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
       - name: Run ESLint on react code
         run: yarn lint
