@@ -1,7 +1,6 @@
 {
-  "name": "dualfi-landing-page",
-  "version": "0.2.0",
-  "private": true,
+  "name": "dual-finance-landing-page",
+  "version": "0.3.0",
   "dependencies": {
     "@pythnetwork/client": "^2.7.0",
     "@solana/web3.js": "^1.42.0",
@@ -27,7 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "eslint": "eslint --ext .js,jsx src"
+    "lint:fix": "eslint --ignore-path .gitignore src/**/*.js --fix; eslint --ignore-path .gitignore src/**/*.jsx --fix",
+    "lint": "eslint --ignore-path .gitignore src/**/*.js; eslint --ignore-path .gitignore src/**/*.jsx"
   },
   "eslintConfig": {
     "extends": [

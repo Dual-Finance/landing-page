@@ -1,0 +1,26 @@
+name: Lint
+on:
+  push:
+    branches: master
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+  SOLANA_VERSION: "1.9.28"
+  RUST_TOOLCHAIN: stable
+
+defaults:
+  run:
+    working-directory: ./
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install eslint
+        run: npm install
+      - name: Run ESLint on react code
+        run: npm run lint
