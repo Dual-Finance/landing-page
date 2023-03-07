@@ -1,7 +1,6 @@
 {
   "name": "dual-finance-landing-page",
   "version": "0.3.0",
-  "private": true,
   "dependencies": {
     "@pythnetwork/client": "^2.7.0",
     "@solana/web3.js": "^1.42.0",
