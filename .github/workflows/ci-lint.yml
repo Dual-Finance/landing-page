@@ -20,6 +20,4 @@ jobs:
 
     steps:
       - name: Run ESLint on react code
-        run: yarn install; yarn run eslint  --ext .js,.ts,.tsx 'src/**/*.tsx'
-      - name: Run ESLint on app
-        run: yarn install; yarn run eslint  --ext .js,.ts,.tsx 'src/**/*.ts'
+        run: yarn lint

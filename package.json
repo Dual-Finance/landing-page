@@ -27,8 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:fix": "eslint  --ignore-path .gitignore src/**/*.js --fix",
-    "lint": "eslint  --ignore-path .gitignore src/**/*.js"
+    "lint:fix": "eslint --ignore-path .gitignore src/**/*.js --fix; eslint --ignore-path .gitignore src/**/*.jsx --fix",
+    "lint": "eslint --ignore-path .gitignore src/**/*.js; eslint --ignore-path .gitignore src/**/*.jsx"
   },
   "eslintConfig": {
     "extends": [
