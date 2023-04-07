@@ -1,7 +1,7 @@
 import React from 'react';
 import c from 'classnames';
 import styles from './CommunitySection.module.scss';
-import { DISCORD, INSTAGRAM, MEDIUM, TWITTER, REALMS } from '../../constants/urls';
+import { DISCORD, INSTAGRAM, MEDIUM, TWITTER, REALMS, GITHUB } from '../../constants/urls';
 import { ResponsiveImage } from '../UI/ResponsiveImage/ResponsiveImage';
 
 const data = [
@@ -30,6 +30,11 @@ const data = [
     link: REALMS,
     imagePath: 'community/realms-image',
   },
+  {
+    title: 'Github',
+    link: GITHUB,
+    imagePath: 'community/github-image',
+  },
 ];
 
 export function CommunitySection() {
@@ -38,7 +43,8 @@ export function CommunitySection() {
       <div className={styles.communitySectionInner}>
         <div className={styles.title}>
           <h2>
-            Become a Part of <br />
+            Become part of our
+            <br />
             Community
           </h2>
         </div>
@@ -80,22 +86,20 @@ export function CommunitySection() {
             </div>
 
             <div className={styles.row}>
-              {[data[4], undefined].map((item, i) => (
-                <div className={styles.cell} key={item?.title || `community-title-${i}`}>
-                  {!item ? null : (
-                    <div className={c(styles.socialNetworkCard)} key={item?.type}>
-                      <a className={styles.linkInner} href={item.link} target="_blank" rel="noreferrer">
-                        <div className={styles.cardLinkWrapper}>
-                          <div className={styles.networkTitle}>{item.title}</div>
-                        </div>
-                        <div className={styles.bgImage}>
-                          <picture>
-                            <img src={`/images/${item.imagePath}.png`} width="110px" height="108px" alt="" />
-                          </picture>
-                        </div>
-                      </a>
-                    </div>
-                  )}
+              {data.slice(4, 6).map((item) => (
+                <div className={styles.cell} key={item.title}>
+                  <div className={c(styles.socialNetworkCard)} key={item?.type}>
+                    <a className={styles.linkInner} href={item.link} target="_blank" rel="noreferrer">
+                      <div className={styles.cardLinkWrapper}>
+                        <div className={styles.networkTitle}>{item.title}</div>
+                      </div>
+                      <div className={styles.bgImage}>
+                        <picture>
+                          <img src={`/images/${item.imagePath}.png`} width="110px" height="108px" alt="" />
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
