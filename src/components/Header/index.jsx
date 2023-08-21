@@ -78,7 +78,7 @@ export function Header() {
         [BTC]: 0.2,
         [ETH]: 0.25,
         [SOL]: 0.3,
-        [MSOL]: 0.3,
+        [MSOL]: 0,
         [MNGO]: 0.35,
         [BONK]: 0.35,
       };
