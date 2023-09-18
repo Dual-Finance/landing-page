@@ -8,6 +8,8 @@ import btcLogo from '../../assets/header/btcLogo.svg';
 import ethLogo from '../../assets/header/ethLogo.svg';
 import solLogo from '../../assets/header/solLogo.svg';
 import mSolLogo from '../../assets/header/mSolLogo.svg';
+import jitoSolLogo from '../../assets/header/tokens/jitosol.svg';
+import dualLogo from '../../assets/header/tokens/dual.svg';
 import mngoLogo from '../../assets/header/tokens/mngo.svg';
 import bonkLogo from '../../assets/header/tokens/bonk.svg';
 import styles from './Header.module.scss';
@@ -37,9 +39,12 @@ export function Header() {
     [SOL]: [0, 0],
     [MSOL]: [0, 0],
   });
+  // eslint-disable-next-line no-unused-vars
   const [btcApy, setBtcApy] = useState(0);
+  // eslint-disable-next-line no-unused-vars
   const [ethApy, setEthApy] = useState(0);
   const [solApy, setSolApy] = useState(0);
+  // eslint-disable-next-line no-unused-vars
   const [msolApy, setMsolApy] = useState(0);
 
   const handleScroll = () => {
@@ -172,7 +177,13 @@ export function Header() {
       rootElement.classList.remove('active');
     }
   }, [menuButtonIsActive]);
-
+  const liveSymbols = new Map([
+    ['SOL', true],
+    ['mSOL', true],
+    ['jitoSOL', true],
+    ['BONK', true],
+    ['DUAL', true],
+  ]);
   return (
     <header className={styles.header}>
       <div className={menuButtonIsActive ? styles.menuShadowWrapper : ''}>
@@ -204,45 +215,72 @@ export function Header() {
           <div className={styles.basementItemsWrapper} ref={elementRef}>
             <div className={styles.basementItems}>
               <img className={styles.logo} src={solLogo} alt="x" />
-              <div className={styles.title}>SOL:</div>
+              <div className={styles.title}>SOL</div>
+              <div
+                className={styles.statusLight}
+                style={{ backgroundColor: liveSymbols.has('SOL') && liveSymbols.get('SOL') ? '#47C09A' : '#FB752A' }}
+              />
               <a href="https://beta.dual.finance/" target="_blank" rel="noreferrer" className={styles.value}>
-                {solApy > 0 ? <div>{solApy}% Max APY&ensp;</div> : <div>Loading&nbsp;</div>}
+                {solApy > 0 ? <div>{solApy}% APY</div> : <div>Loading</div>}
               </a>
             </div>
             <div className={styles.basementItems}>
               <img className={styles.logo} src={mSolLogo} alt="x" />
-              <div className={styles.title}>mSOL:</div>
-              <a href="https://beta.dual.finance/" target="_blank" rel="noreferrer" className={styles.value}>
-                {msolApy > 0 ? <div>{msolApy}% Max APY&ensp;</div> : <div>Loading&nbsp;</div>}
-              </a>
+              <div className={styles.title}>mSOL</div>
+              <div
+                className={styles.statusLight}
+                style={{ backgroundColor: liveSymbols.has('mSOL') && liveSymbols.get('mSOL') ? '#47C09A' : '#FB752A' }}
+              />
+            </div>
+            <div className={styles.basementItems}>
+              <img className={styles.logo} src={jitoSolLogo} alt="x" />
+              <div className={styles.title}>jitoSOL</div>
+              <div
+                className={styles.statusLight}
+                style={{
+                  backgroundColor: liveSymbols.has('jitoSOL') && liveSymbols.get('jitoSOL') ? '#47C09A' : '#FB752A',
+                }}
+              />
             </div>
             <div className={styles.basementItems}>
               <img className={styles.logo} src={btcLogo} alt="x" />
-              <div className={styles.title}>BTC:</div>
-              <a href="https://beta.dual.finance/" target="_blank" rel="noreferrer" className={styles.value}>
-                {btcApy > 0 ? <div>{btcApy}% Max APY&ensp;</div> : <div>Coming Soon&nbsp;</div>}
-              </a>
+              <div className={styles.title}>BTC</div>
+              <div
+                className={styles.statusLight}
+                style={{ backgroundColor: liveSymbols.has('BTC') && liveSymbols.get('BTC') ? '#47C09A' : '#FB752A' }}
+              />
             </div>
             <div className={styles.basementItems}>
               <img className={styles.logo} src={ethLogo} alt="x" />
-              <div className={styles.title}>ETH:</div>
-              <a href="https://beta.dual.finance/" target="_blank" rel="noreferrer" className={styles.value}>
-                {ethApy > 0 ? <div>{ethApy}% Max APY&ensp;</div> : <div>Coming Soon&nbsp;</div>}
-              </a>
-            </div>
-            <div className={styles.basementItems}>
-              <img className={styles.logo} src={mngoLogo} alt="x" />
-              <div className={styles.title}>MNGO:</div>
-              <a href="https://beta.dual.finance/" target="_blank" rel="noreferrer" className={styles.value}>
-                <div>Coming Soon&nbsp;</div>
-              </a>
+              <div className={styles.title}>ETH</div>
+              <div
+                className={styles.statusLight}
+                style={{ backgroundColor: liveSymbols.has('ETH') && liveSymbols.get('ETH') ? '#47C09A' : '#FB752A' }}
+              />
             </div>
             <div className={styles.basementItems}>
               <img className={styles.logo} src={bonkLogo} alt="x" />
-              <div className={styles.title}>BONK:</div>
-              <a href="https://beta.dual.finance/" target="_blank" rel="noreferrer" className={styles.value}>
-                <div>Staking Options Available!&nbsp;</div>
-              </a>
+              <div className={styles.title}>BONK</div>
+              <div
+                className={styles.statusLight}
+                style={{ backgroundColor: liveSymbols.has('BONK') && liveSymbols.get('BONK') ? '#47C09A' : '#FB752A' }}
+              />
+            </div>
+            <div className={styles.basementItems}>
+              <img className={styles.logo} src={mngoLogo} alt="x" />
+              <div className={styles.title}>MNGO</div>
+              <div
+                className={styles.statusLight}
+                style={{ backgroundColor: liveSymbols.has('MNGO') && liveSymbols.get('MNGO') ? '#47C09A' : '#FB752A' }}
+              />
+            </div>
+            <div className={styles.basementItems}>
+              <img className={styles.logo} src={dualLogo} alt="x" />
+              <div className={styles.title}>DUAL</div>
+              <div
+                className={styles.statusLight}
+                style={{ backgroundColor: liveSymbols.has('DUAL') && liveSymbols.get('DUAL') ? '#47C09A' : '#FB752A' }}
+              />
             </div>
           </div>
 
